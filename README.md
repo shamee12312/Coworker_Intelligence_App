@@ -3,7 +3,7 @@
 This is a prototype of the **Coworker AI** system — a lightweight AI agent intended to assist with workplace tasks such as information retrieval, task coordination, and internal intelligence services.
 
 🌐 **Live Site**: [https://coworker-intelligence-shamee12312.replit.app](https://coworker-intelligence-shamee12312.replit.app)
-🌐 **Github Site**: [https://coworker-intelligence-shamee12312.replit.app](https://coworker-intelligence-shamee12312.replit.app)
+🌐 **Github Site**: [https://github.com/shamee12312/Coworker_Intelligence_App]
 
 
 ## 🧠 Project Features
