@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(240, 10%, 3.9%);
+  --muted: hsl(240, 4.8%, 95.9%);
+  --muted-foreground: hsl(240, 3.7%, 45.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 3.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 3.9%);
+  --border: hsl(240, 5.9%, 90%);
+  --input: hsl(240, 5.9%, 90%);
+  --primary: hsl(220.9, 39.3%, 11%);
+  --primary-foreground: hsl(210, 20%, 98%);
+  --secondary: hsl(220, 14.3%, 95.9%);
+  --secondary-foreground: hsl(220.9, 39.3%, 11%);
+  --accent: hsl(220, 14.3%, 95.9%);
+  --accent-foreground: hsl(220.9, 39.3%, 11%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(240, 5%, 64.9%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for Coworker-AI brand */
+  --brand-primary: hsl(207, 90%, 54%);
+  --brand-primary-foreground: hsl(211, 100%, 99%);
+  --brand-success: hsl(142, 71%, 45%);
+  --brand-success-foreground: hsl(142, 76%, 36%);
+  --brand-slate-50: hsl(210, 40%, 98%);
+  --brand-slate-100: hsl(210, 40%, 96%);
+  --brand-slate-900: hsl(222, 84%, 4.9%);
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(217.2, 32.6%, 17.5%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, hsl(207, 90%, 54%), hsl(207, 90%, 64%));
+  }
+  
+  .text-brand-primary {
+    color: hsl(207, 90%, 54%);
+  }
+  
+  .bg-brand-primary {
+    background-color: hsl(207, 90%, 54%);
+  }
+  
+  .hover\:bg-brand-primary:hover {
+    background-color: hsl(207, 90%, 48%);
+  }
+  
+  .bg-brand-slate-50 {
+    background-color: hsl(210, 40%, 98%);
+  }
+  
+  .bg-brand-slate-900 {
+    background-color: hsl(222, 84%, 4.9%);
+  }
+  
+  .text-brand-slate-400 {
+    color: hsl(215, 20.2%, 65.1%);
+  }
+  
+  .text-brand-slate-600 {
+    color: hsl(215.4, 16.3%, 46.9%);
+  }
+  
+  .text-brand-slate-700 {
+    color: hsl(215.3, 19.3%, 34.5%);
+  }
+  
+  .text-brand-slate-900 {
+    color: hsl(222, 84%, 4.9%);
+  }
+  
+  .border-brand-primary {
+    border-color: hsl(207, 90%, 54%);
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Grid background pattern */
+.bg-grid-slate {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23cbd5e1'%3e%3cpath d='m0 .5 32 0'/%3e%3cpath d='m0 .5 0 32'/%3e%3c/svg%3e");
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
